@@ -1,2 +1,2 @@
 # PUB_DAW
-Repositório Público de Desenvolvimento Aplicações WEB
+Repositório Público de Desenvolvimento de Aplicações WEB

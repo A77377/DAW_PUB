@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <identificador>ARQELEMS_SERVER_T4_A77377</identificador>
+        <titulo>Servidor de páginas HTML relativas a Arqueossítios do NW Português</titulo>
+        <subtitulo>Projeto no âmbito da unidade curricular de Desenvolvimento de Aplicações
+            Web</subtitulo>
+        <dinicio>9 de Outubro de 2018</dinicio>
+        <dfim>15 de Outubro de 2018</dfim>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website>http://www.di.uminho.pt/~jcr</website>
+        </supervisor>
+    </meta>
+    <equipa>
+        <membro>
+            <nome>Pedro Henrique</nome>
+            <email>a77377@alunos.uminho.pt</email>
+            <identificador>A77377</identificador>
+        </membro>
+    </equipa>
+    <resumo>
+        <para>
+            No âmbito do 4º trabalho prático da unidade curricular de <b>Desenvolvimento de Aplicações Web</b> é pedido que seja 
+            escrito um servidor de páginas HTML geradas a partir de um <i>dataset</i> relativo aos Arqueossítios do Noroeste 
+            Português, contido num ficheiro XML.
+        </para>
+        <para>
+            O servidor a ser desenvolvido deve verificar o <i>path</i> contido no URL do pedido e devolver a página pedida, se o 
+            caminho espeficiado estiver previsto para uma das páginas a servir. Uma das páginas válidas a servir será a do índice, 
+            que apresenta uma lista ordenada dos concelhos onde se encontram arqueossítios do <i>dataset</i>. Cada elemento da lista 
+            terá a si associada, por sua vez, uma lista ordenada dos nomes dos arqueossítios no dado concelho. As restantes páginas 
+            válidas correspondem às páginas relativas a cada arqueossítio. Cada entrada para um arqueossítio no índice deve ter um 
+            <i>link</i> que gere um pedido ao servidor para obtenção da sua respetiva página. De modo semelhante, cada página relativa 
+            a um arqueossítio terá um <i>link</i> que permite pedir ao servidor a página HTML relativa ao índice.
+        </para>
+    </resumo>
+    <resultados>
+        <resultado url="https://github.com/A77377/PUB_DAW">Página do GitHub do repositório público de DAW</resultado>
+        <resultado url="manifesto_tp4.xml">Ficheiro XML relativo ao manifesto do 4º trabalho</resultado>
+    </resultados>
+</manifesto>
