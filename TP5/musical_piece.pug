@@ -1,0 +1,59 @@
+extends layout
+
+block page_content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-light-grey
+                h1= musical_piece.titulo
+            .w3-container
+                table.w3-table.w3-bordered
+                    if musical_piece.hasOwnProperty('_id')
+                        tr
+                            th ID
+                            td= musical_piece._id
+                    if musical_piece.hasOwnProperty('tipo')
+                        tr
+                            th Tipo
+                            td= musical_piece.tipo
+                    if musical_piece.hasOwnProperty('compositor')
+                        tr
+                            th Compositor
+                            td= musical_piece.compositor
+                    if musical_piece.hasOwnProperty('arranjo')
+                        tr
+                            th Arranjo
+                            td= musical_piece.arranjo
+                    if musical_piece.hasOwnProperty('instrumentos')
+                        tr
+                            th Instrumentos
+                            td
+                                each instrument in musical_piece.instrumentos
+                                    table.w3-table.w3-bordered
+                                        tr
+                                            th Nome
+                                            td= instrument.nome
+                                        if instrument.hasOwnProperty('partitura')
+                                        - var music_sheet = instrument.partitura
+                                            if music_sheet.hasOwnProperty('path')
+                                                tr
+                                                    th Path da Partitura
+                                                    td
+                                                        a(href=music_sheet.path)= music_sheet.path
+                                            if music_sheet.hasOwnProperty('clave')
+                                                tr
+                                                    th Clave
+                                                    td= music_sheet.clave
+                                            if music_sheet.hasOwnProperty('afinacao')
+                                                tr
+                                                    th Afinação
+                                                    td= music_sheet.afinacao
+                                            if music_sheet.hasOwnProperty('voz')
+                                                tr
+                                                    th Voz
+                                                    td= music_sheet.voz
+                                    br
+            .w3-container
+                a(href="http://localhost:5555/index") Voltar ao índice.
+            
+            footer.w3-container.w3-light-grey
+                address Gerado com Pug para DAW
