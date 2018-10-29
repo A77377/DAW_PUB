@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <identificador>TASK_MANAGER_T6_A77377</identificador>
+        <titulo>Aplicação de Gestão de Tarefas</titulo>
+        <subtitulo>Projeto no âmbito da unidade curricular de Desenvolvimento de Aplicações
+            Web</subtitulo>
+        <dinicio>23 de Outubro de 2018</dinicio>
+        <dfim>29 de Outubro de 2018</dfim>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website>http://www.di.uminho.pt/~jcr</website>
+        </supervisor>
+    </meta>
+    <equipa>
+        <membro>
+            <nome>Pedro Henrique</nome>
+            <email>a77377@alunos.uminho.pt</email>
+            <identificador>A77377</identificador>
+        </membro>
+    </equipa>
+    <resumo>
+        <para>
+            Para o 6º trabalho prático da unidade curricular de <b>Desenvolvimento de Aplicações Web</b> é necessário criar 
+            uma aplicação de registo de tarefas do quotidiano.
+        </para>
+        <para>
+            Na base da aplicação encontra-se um servidor, semelhante aos realizados para os trabalhos anteriores, que responde 
+            adequadamente a mensagens de 2 métodos do protocolo HTTP (GET e POST, em particular) e que gera páginas HTML com 
+            recurso ao motor de <i>templates</i> <b>Pug</b>.
+            Novamente, o servidor analisa o <i>path</i> contido no URL do pedido para encontrar a página pretendida, no caso de 
+            se encontrar em uso um caminho previsto. Todas as páginas servidas são geradas a partir de <i>templates</i> pelo 
+            motor <b>Pug</b>.
+        </para>
+        <para>
+            Uma das novidades para esta iteração dos trabalhos práticos é o uso de formulários, para preenchimento de informação 
+            a registar. No caso particular desta aplicação, os formulários são referentes a tarefas a cumprir, devendo ser submetidos - 
+            pelo uso do método HTTP POST, outra das novidades - data de registo, prazo de cumprimento, descrição e tipo da tarefa, 
+            havendo também espaço para outras possíveis adições (como o grau de prioridade da tarefa, por exemplo). Outra das novidades 
+            é a introdução da persistência de dados, que aqui se efetua de forma simples pelo uso do pacote <i>jsonfile</i>, com o qual 
+            se regista num ficheiro JSON válido os dados submetidos através da aplicação. Está também prevista a funcionalidade de remoção 
+            de tarefas.
+        </para>
+    </resumo>
+    <resultados>
+        <resultado url="https://github.com/A77377/PUB_DAW">Página do GitHub do repositório público de DAW</resultado>
+        <resultado url="manifesto_tp6.xml">Ficheiro XML relativo ao manifesto do 6º trabalho</resultado>
+    </resultados>
+</manifesto>

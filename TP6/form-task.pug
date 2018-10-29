@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Registo de Tarefa
+            .w3-container
+                form.w3-container(action='/processaForm' method='POST')
+                    label.w3-text-teal
+                        b Data de Registo
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='reg_date')
+                    label.w3-text-teal
+                        b Prazo
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='due_date')
+                    label.w3-text-teal
+                        b Descrição
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='desc')
+                    label.w3-text-teal
+                        b Tipo
+                    select.w3-select.w3-border.w3-light-grey(name='type')
+                        option(value='' disabled selected) Tipo da tarefa
+                        option(value='Académica') Académica
+                        option(value='Doméstica') Doméstica
+                        option(value='Lazer') Lazer
+                        option(value='Outro') Outro
+                    label.w3-text-teal
+                        b Prioridade
+                    select.w3-select.w3-border.w3-light-grey(name='priority')
+                        option(value='Indefinida' disabled selected) Prioridade da tarefa
+                        option(value='Baixa') Baixa
+                        option(value='Média') Média
+                        option(value='Alta') Alta
+                    //- label.w3-text-teal
+                    //-     b Tipo
+                    //- input.w3-radio(type='radio' name='type' value="Académica")
+                    //- label Académica
+                    //- input.w3-radio(type='radio' name='type' value="Doméstica")
+                    //- label Doméstica
+                    //- input.w3-radio(type='radio' name='type' value="Lazer")
+                    //- label Lazer
+                    //- input.w3-radio(type='radio' name='type' value="Outro" checked)
+                    //- label Outro
+                    input.w3-btn.w3-blue-grey(type='submit' value='Registar')
+            footer.w3-container.w3-teal
+                address Gerado por TaskApp
+                    a(style='float:right' href='/') Voltar à página principal
