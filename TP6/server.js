@@ -40,6 +40,19 @@ var myServer = http.createServer((req, res) => {
                 }
             });
         } 
+        else if (purl.pathname == '/apaga') {
+            jsonfile.writeFile(myBD, [], (erro) => {
+                if (erro) {
+                    console.log(erro);
+                }
+                else {
+                    console.log('Lista de tarefas apagada com sucesso.');
+                }
+            });
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+            res.write(pug.renderFile('apagada-conf.pug', {task: query}));
+            res.end();
+        }
         else if (purl.pathname == '/processaForm') {
             res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
             res.write(pug.renderFile('task-recebida.pug', {task: query}));
