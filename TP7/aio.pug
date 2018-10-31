@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    header.w3-container.w3-teal
+        h3 FileUploader
+    form#file-upload.w3-container.w3-card-4(action='/' method='POST' enctype='multipart/form-data')
+        p
+            label.w3-text-teal
+                b Ficheiro
+            input.w3-input.w3-border.w3-light-grey(type='file' id='ficheiro' name='ficheiro')
+        p
+            label.w3-text-teal
+                b Descrição
+            input.w3-input.w3-border.w3-light-grey(type='text' id='desc' name='desc' placeholder='Insira uma descrição do ficheiro carregado.')
+        p
+            input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+    header.w3-container.w3-teal
+        h4 Lista de Ficheiros 
+    .w3-container.w3-card-4
+        p
+            table#files.w3-table-all
+                tr
+                    th Ficheiro
+                    th Descrição
+                - const uploadedFilesCheck = (!(files === null) && files.length != null && files.length > 0);
+                if !uploadedFilesCheck
+                    tr
+                        td Nada a apresentar
+                        td Nada a apresentar
+                else
+                    each file in files
+                        tr
+                            td
+                                a(href='./uploadedFiles/' + file.name)= file.name
+                            td= file.desc
+    footer.w3-container.w3-teal
+        address Gerado por FileUploader
+            a(style='float:right' href='/form') Formulário dedicado

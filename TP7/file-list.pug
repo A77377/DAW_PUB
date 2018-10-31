@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    header.w3-container.w3-teal
+        h3 Ficheiros Carregados
+    .w3-container.w3-card-4
+        p
+            table.w3-table-all
+                tr
+                    th Ficheiro
+                    th Descrição
+                - const uploadedFilesCheck = (files.length != null && files.length > 0)
+                if !uploadedFilesCheck
+                    tr
+                        td Nada a apresentar
+                        td Nada a apresentar
+                else
+                    each file in files
+                        tr
+                            td
+                                a(href='./uploadedFiles/' + file.name)= file.name
+                            td= file.desc
+    footer.w3-container.w3-teal
+        address Gerado por FileUploader
+            a(style='float:right' href='/form') Voltar ao formulário dedicado

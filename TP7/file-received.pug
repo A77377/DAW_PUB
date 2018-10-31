@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    header.w3-container.w3-teal
+        h3 Ficheiro Recebido
+    .w3-container.w3-card-4
+        p
+            p= status
+            table.w3-table-all
+                tr
+                    th Ficheiro
+                    td= file
+                tr
+                    th Descrição
+                    td= desc
+    footer.w3-container.w3-teal
+        address Gerado por FileUploader
+            a(style='float:right' href='/form') Voltar ao formulário dedicado
