@@ -20,7 +20,7 @@ app.all('*', (req, res, next) => {
 });
 
 app.get('/form', (req, res) => {
-    res.write(pug.renderFile('file-form.pug'));
+    res.write(pug.renderFile('pug-files/file-form.pug'));
     res.end();
 });
 
@@ -31,7 +31,7 @@ app.get('/w3.css', (req, res) => {
             res.write(dados);
         }
         else {
-            res.write(pug.renderFile('error.pug', {e: err}));
+            res.write(pug.renderFile('pug-files/error.pug', {e: err}));
         }
         res.end();
     });
@@ -40,11 +40,11 @@ app.get('/w3.css', (req, res) => {
 app.get('/ficheiros', (req, res) => {
     jsonfile.readFile('stored_files.json', (err, stored_files) => {
         if (!err) {
-            res.write(pug.renderFile('file-list.pug', {files: stored_files}));
+            res.write(pug.renderFile('pug-files/file-list.pug', {files: stored_files}));
             res.end();
         }
         else {
-            res.end(pug.renderFile('error.pug', {e: err}));
+            res.end(pug.renderFile('pug-files/error.pug', {e: err}));
         }
     });
 });
@@ -52,11 +52,11 @@ app.get('/ficheiros', (req, res) => {
 app.get('/', (req, res) => {
     jsonfile.readFile('stored_files.json', (err, stored_files) => {
         if (!err) {
-            res.write(pug.renderFile('aio.pug', {files: stored_files}));
+            res.write(pug.renderFile('pug-files/aio.pug', {files: stored_files}));
             res.end();
         }
         else {
-            res.write(pug.renderFile('error.pug', {e: err}));
+            res.write(pug.renderFile('pug-files/error.pug', {e: err}));
             res.end();
         }
     });
@@ -77,10 +77,10 @@ app.post('/', (req, res) => {
                         stored_files.push(fileObj);
                         jsonfile.writeFile('stored_files.json', stored_files, (err) => {
                             if (!err) {
-                                res.write(pug.renderFile('aio.pug', {files: stored_files}));
+                                res.write(pug.renderFile('pug-files/aio.pug', {files: stored_files}));
                             }
                             else {
-                                res.write(pug.renderFile('error.pug',
+                                res.write(pug.renderFile('pug-files/error.pug',
                                     {e: 'Ocorreram erros no armazenamento do ficheiro!'}
                                 ));
                             }
@@ -90,7 +90,7 @@ app.post('/', (req, res) => {
                 });
             }
             else {
-                res.write(pug.renderFile('error.pug',
+                res.write(pug.renderFile('pug-files/error.pug',
                     {e: 'Ocorreram erros no armazenamento do ficheiro!'}
                 ));
                 res.end();
@@ -115,7 +115,7 @@ app.post('/processaFormSolo', (req, res) => {
                         stored_files.push(fileObj);
                         jsonfile.writeFile('stored_files.json', stored_files, (err) => {
                             if (!err) {
-                                res.write(pug.renderFile('file-received.pug',
+                                res.write(pug.renderFile('pug-files/file-received.pug',
                                 {
                                     file: files.ficheiro.name,
                                     desc: fields.desc,
@@ -123,7 +123,7 @@ app.post('/processaFormSolo', (req, res) => {
                                 }));
                             }
                             else {
-                                res.write(pug.renderFile('error.pug',
+                                res.write(pug.renderFile('pug-files/error.pug',
                                     {e: 'Ocorreram erros no armazenamento do ficheiro!'}
                                 ));
                             }
@@ -133,7 +133,7 @@ app.post('/processaFormSolo', (req, res) => {
                 });
             }
             else {
-                res.write(pug.renderFile('error.pug',
+                res.write(pug.renderFile('pug-files/error.pug',
                     {e: 'Ocorreram erros no armazenamento do ficheiro!'}
                 ));
                 res.end();

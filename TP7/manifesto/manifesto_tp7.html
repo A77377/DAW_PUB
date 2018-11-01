@@ -1,0 +1,127 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Manifesto A77377</title>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      
+      <h1 align="center">Manifesto</h1>
+      <hr>
+      <table width="100%" border="0">
+         
+         <tr>
+            <th><b>Identificador:</b></th>
+            <td>FILE_UPLOADER_T7_A77377</td>
+         </tr>
+         
+         <tr>
+            <th><b>Título:</b></th>
+            <td>Aplicação de Upload e Listagem de Ficheiros</td>
+         </tr>
+         
+         <tr>
+            <th><b>Subtítulo:</b></th>
+            <td>Projeto no âmbito da unidade curricular de Desenvolvimento de Aplicações
+               Web
+            </td>
+         </tr>
+         
+         <tr>
+            <th><b>Data de início:</b></th>
+            <td>30 de Outubro de 2018</td>
+         </tr>
+         
+         <tr>
+            <th><b>Data de fim:</b></th>
+            <td>6 de Novembro de 2018</td>
+         </tr>
+         
+         <tr>
+            <th><b>Supervisor:</b></th>
+            <td>
+               José Carlos Ramalho<br>
+               <a href="mailto:jcr@di.uminho.pt">jcr@di.uminho.pt</a><br>
+               <a href="http://www.di.uminho.pt/~jcr">http://www.di.uminho.pt/~jcr</a>
+               
+            </td>
+         </tr>
+         
+      </table>
+      <hr>
+      
+      <hr>
+      <h3>Equipa:</h3>
+      <ol>
+         
+         <li>Pedro Henrique (A77377) - <a href="mailto:a77377@alunos.uminho.pt">a77377@alunos.uminho.pt</a><br>
+            
+            
+            
+            
+         </li>
+         
+      </ol>
+      <hr>
+      
+      <hr>
+      <h3>Resumo:</h3>
+      
+      <p>
+         O 7º trabalho prático da unidade curricular de <b>Desenvolvimento de Aplicações Web</b> tem como objetivo 
+         a criação de uma aplicação que recebe ficheiros carregados pelo utilizador/cliente
+         e os armazena numa 
+         diretoria no lado do servidor. A aplicação, para além de permitir o <i>upload</i> de ficheiros, deve mostrar 
+         ao utilizador os ficheiros já carregados e guardados no servidor.
+         
+      </p>
+      
+      <p>
+         Tal como tem vindo a acontecer nos trabalhos para casa anteriores da disciplina, o
+         principal foco é a 
+         programação de um servidor. Esta iteração coloca em uso vários pacotes que facilitam
+         ou simplificam o 
+         processo de programação que tem vindo a ser utilizado. Entre estes encontram-se a
+         <i>framework</i> 
+         <b>Express</b>, o módulo de <i>parsing</i> de dados de formulários <b>Formidable</b>, o <i>logger</i> 
+         de pedidos HTTP <b>Morgan</b> e o já utilizado motor de <i>templates</i> <b>Pug</b>.
+         
+      </p>
+      
+      <p>
+         As funcionalidades de carregamento e listagem de ficheiros são suportadas tanto por
+         páginas individuais 
+         (uma página para o formulário, com o <i>path</i> /form e uma página para a listagem, com o <i>path</i> 
+         /ficheiros), como por uma página que combina as duas funcionalidades (servida em /).
+         A página única que 
+         combina as duas funcionalidades funciona ainda sem recurso a jQuery e AJAX, havendo
+         portanto o envio 
+         dos dados submetidos para o servidor (ficheiro carregado e uma pequena descrição)
+         e uma nova geração 
+         completa da página, seguida do seu envio para o cliente. Tal como já foi referido,
+         os ficheiros enviados 
+         são guardados numa diretoria no servidor e o seu nome e a sua descrição ficam registados
+         num ficheiro JSON, 
+         sobre a forma de um lista de objetos (um por ficheiro), que suporta a funcionalidade
+         de listagem. Esta 
+         funcionalidade, por sua vez, providencia ligações para os ficheiros carregados e a
+         partir dessas há suporte 
+         para servir os ficheiros carregados ao cliente.
+         
+      </p>
+      
+      <hr>
+      
+      <hr>
+      <h3>Resultados:</h3>
+      <ul>
+         
+         <li><a href="https://github.com/A77377/PUB_DAW">Página do GitHub do repositório público de DAW</a></li>
+         
+         <li><a href="manifesto_tp7.xml">Ficheiro XML relativo ao manifesto do 7º trabalho</a></li>
+         
+      </ul>
+      <hr>
+      
+   </body>
+</html>
