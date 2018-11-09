@@ -1,0 +1,10 @@
+tr
+    th Ficheiro
+    th Descrição
+    th Instante de Upload
+each file in files
+    tr
+        td
+            a(href='./uploaded/' + file.name)= file.name
+        td= file.desc
+        td= file.time

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <identificador>FILE_UPLOADER_SPA_T8_A77377</identificador>
+        <titulo>Single Page Application de Upload e Listagem de Ficheiros</titulo>
+        <subtitulo>Projeto no âmbito da unidade curricular de Desenvolvimento de Aplicações Web</subtitulo>
+        <dinicio>6 de Novembro de 2018</dinicio>
+        <dfim>12 de Novembro de 2018</dfim>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website>http://www.di.uminho.pt/~jcr</website>
+        </supervisor>
+    </meta>
+    <equipa>
+        <membro>
+            <nome>Pedro Henrique</nome>
+            <email>a77377@alunos.uminho.pt</email>
+            <identificador>A77377</identificador>
+        </membro>
+    </equipa>
+    <resumo>
+        <para>
+            O 8º trabalho prático da unidade curricular de <b>Desenvolvimento de Aplicações Web</b> é em tudo semelhante ao 
+            trabalho prático anterior, sendo agora obrigatória a criação da aplicação de receção e serviço de ficheiros 
+            carregados numa uma página unificada, que aqui toma o nome de <b>SPA</b> ou <i>Single Page Application</i>.
+            Com recurso a jQuery e AJAX, nesta versão não há o recarregamento completo da página, tal como acontecia no 7º 
+            trabalho prático, havendo apenas a atualização de elementos específicos da página com o novo conteúdo de cada novo 
+            carregamento.
+        </para>
+    </resumo>
+    <resultados>
+        <resultado url="https://github.com/A77377/PUB_DAW">Página do GitHub do repositório público de DAW</resultado>
+        <resultado url="manifesto_tp8.xml">Ficheiro XML relativo ao manifesto do 8º trabalho</resultado>
+    </resultados>
+</manifesto>

@@ -1,0 +1,1 @@
+# Diretoria dos Ficheiros Carregados

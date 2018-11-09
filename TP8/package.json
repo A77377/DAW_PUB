@@ -1,0 +1,19 @@
+{
+  "name": "filespa_t8",
+  "version": "8.8.8",
+  "main": "app.js",
+  "description": "8º TPC de DAW",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "phf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "http-errors": "^1.7.1",
+    "jsonfile": "^5.0.0",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  }
+}

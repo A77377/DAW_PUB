@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    header.w3-container.w3-teal
+        h3 FileUploaderSPA
+    form#file-upload.w3-container.w3-card-4(action='/' method='POST' enctype='multipart/form-data')
+        p
+            label.w3-text-teal
+                b Ficheiro
+            input#file.w3-input.w3-border.w3-light-grey(type='file' name='file')
+        p
+            label.w3-text-teal
+                b Descrição
+            input#desc.w3-input.w3-border.w3-light-grey(type='text' name='desc' placeholder='Insira uma descrição do ficheiro carregado.')
+        p
+            input#send.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+    header.w3-container.w3-teal
+        h4 Ficheiros Carregados 
+    .w3-container.w3-card-4
+        p
+            table#files.w3-table-all
+    footer.w3-container.w3-teal
+        address Gerado por FileUploaderSPA
